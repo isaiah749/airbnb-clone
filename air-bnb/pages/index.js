@@ -11,15 +11,15 @@ import SmallCard from '../components/SmallCard'
 // it as props.exploreData
 export default function Home({ exploreData, cardsData }) {
   return (
-    <div className='min-h-screen flex flex-col'>
+    <div className='min-h-screen min-w-screen flex flex-col'>
       <Head>
         <title>AirBNB-Clone</title>
       </Head>
       <Header />
       <Banner />
 
-      <main className="max-w-7xl sm:mx-0 px-8 sm:px-16">
-        <section className="pt-5">
+      <main className="max-w-7xl 2xl:mx-auto sm:mx-0 px-8 2xl:px-0 sm:px-16">
+        <section className="pt-5 2xl:-ml-[10rem]">
           <h2 className="text-3xl font-semibold pb-2">Explore Nearby</h2>
           {/* Pull data from server - API endpoints */}
           
@@ -70,10 +70,10 @@ export default function Home({ exploreData, cardsData }) {
           */}
         </section>
 
-        <section className="">
+        <section className="2xl:-ml-[10rem] border-black border">
           <h2 className="text-4xl font-semibold py-8">Live Anywhere</h2>
           
-          <div className="flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-2">
+          <div className="flex space-x-3 mx-auto w- overflow-scroll scrollbar-hide p-3 -ml-2">
             {cardsData.map(({img, title}) => (
               <MediumCard key={img} img={img} title={title} />
             ))}
@@ -81,8 +81,9 @@ export default function Home({ exploreData, cardsData }) {
         </section>
         <LargeCard img='https://links.papareact.com/4cj' title='The Greatest Outdoors' description='Wishlist curated by Airbnb' buttonText='Get Inspired' />
       </main>
-
-      <Footer />
+      
+     
+          <Footer />    
 
     </div>
   )
