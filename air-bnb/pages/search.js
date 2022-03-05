@@ -36,11 +36,11 @@ function Search({ searchResults }) {
                 <h1 className="text-3xl font-semibold mt-2 mb-6">Stays in {location}</h1>
 
                 <div className="hidden lg:inline-flex mb-5 space-x-3 text-gray-800 items-center">
-                    <p className="button">Cancellation Flexibility</p>
-                    <p className="button">Types of place</p>
-                    <p className="button">Price</p>
-                    <p className="button">Rooms and beds</p>
-                    <p className="button">More items</p>
+                    <p className="button shadow-lg">Cancellation Flexibility</p>
+                    <p className="button shadow-lg">Types of place</p>
+                    <p className="button shadow-lg">Price</p>
+                    <p className="button shadow-lg">Rooms and beds</p>
+                    <p className="button shadow-lg">More items</p>
                 </div>
 
                 <div className="flex flex-col">

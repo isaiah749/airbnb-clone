@@ -11,16 +11,16 @@ import SmallCard from '../components/SmallCard'
 // it as props.exploreData
 export default function Home({ exploreData, cardsData }) {
   return (
-    <div className='min-h-screen min-w-screen flex flex-col'>
+    <div className='min-h-screen bg-gray-900 max-w-screen flex flex-col'>
       <Head>
         <title>AirBNB-Clone</title>
       </Head>
       <Header />
       <Banner />
 
-      <main className="max-w-7xl 2xl:mx-auto sm:mx-0 px-8 2xl:px-0 sm:px-16">
+      <main className="max-w-7xl 2xl:mx-auto  sm:mx-0 px-8 2xl:px-0 sm:px-16">
         <section className="pt-5 2xl:-ml-[10rem]">
-          <h2 className="text-3xl font-semibold pb-2">Explore Nearby</h2>
+          <h2 className="text-3xl font-semibold text-white pb-2">Explore Nearby</h2>
           {/* Pull data from server - API endpoints */}
           
           {/* Mapping through exploreData */}
@@ -51,7 +51,7 @@ export default function Home({ exploreData, cardsData }) {
           - Its okay with a couple of items (4 for example), but when having a lot of items it can be problematic, so the key solves this
           */}
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-auto w-screen xl:grid-cols-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 text-white lg:grid-cols-3 mx-auto w-screen xl:grid-cols-4">
             {exploreData.map(({img, distance, location}) => (
               <SmallCard 
                 key = {img}
@@ -70,10 +70,10 @@ export default function Home({ exploreData, cardsData }) {
           */}
         </section>
 
-        <section className="2xl:-ml-[10rem] border-black border">
-          <h2 className="text-4xl font-semibold py-8">Live Anywhere</h2>
+        <section className="mx-auto text-white">
+          <h2 className="text-4xl font-semibold 2xl:-ml-[10rem] py-8">Live Anywhere</h2>
           
-          <div className="flex space-x-3 mx-auto w- overflow-scroll scrollbar-hide p-3 -ml-2">
+          <div className="flex space-x-3 mx-auto overflow-scroll scrollbar-hide p-3 -ml-2">
             {cardsData.map(({img, title}) => (
               <MediumCard key={img} img={img} title={title} />
             ))}
